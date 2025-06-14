@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Smart Resume Builder</h1>
+  <div class="container">
+    <form id="resumeForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" />
+      <input type="text" id="phone" placeholder="Phone Number" />
+      <input type="url" id="linkedin" placeholder="LinkedIn Profile" />
+      <textarea id="summary" placeholder="Professional Summary"></textarea>
+      <textarea id="experience" placeholder="Experience"></textarea>
+      <textarea id="education" placeholder="Education"></textarea>
+      <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+      <button type="submit">Generate Resume</button>
+      <button type="button" id="downloadPdf">Download PDF</button>
+      <button type="button" id="downloadJson">Save as JSON</button>
+      <input type="file" id="uploadJson" accept=".json"/>
+    </form>
+
+    <div id="previewContainer">
+      <h3>Resume Preview</h3>
+      <div id="resumePreview"></div>
+    </div>
+  </div>
+
+  <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
